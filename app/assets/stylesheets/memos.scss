@@ -1,0 +1,110 @@
+// Place all the styles related to the memos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.header{
+  background: image-url('questions-2245264_1920.jpg');
+  position : relative;
+  background-size: 55%;
+  height:150px;
+  .title{
+    position: absolute;
+    left:0;
+    font-size:80px;
+  }
+  .title-positon{
+    color:white;
+  }
+}
+
+
+.card-group{
+  position: relative;
+
+  .cards{
+    box-sizing:content-box;
+    margin:20px;
+    background:repeating-linear-gradient(45deg, #e79901 0, #dcac4c 10px, #e2e7eb 10px, #c1c8ce 20px);
+    border-left: double 10px #9BF9CC;
+    border-right: double 10px #9BF9CC;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+    left:50px;
+
+    .card-text{
+      word-break:break-all;
+    }
+
+  .list-group-item{
+    padding:5px !important;
+  }
+  .card-links{
+    padding:5px !important;
+    float:right;
+
+    .card-link{
+      margin-right:5px;
+
+    }
+  }
+}
+
+
+.over-date{
+  background:repeating-linear-gradient(45deg, #eb0707 0, #d35e5e 10px, #ebe2e2 10px, #cec1c1 20px);
+}
+}
+
+.form-group{
+  font-size:20px;
+  float:right;
+  background: whitesmoke;
+  border-left: double 10px #9BF9CC;
+  border-right: double 10px #9BF9CC;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+  position: fixed;
+  right:0;
+  bottom:0;
+
+  .form{
+    display:none;
+
+    label {
+      margin-right: 10px;
+      width:100px;
+    }
+    .btn-stitch {
+      display: inline-block;
+      padding: 3px 5px;
+      text-decoration: none;
+      background: #66d87f;
+      color: #FFF;
+      border-radius: 4px;
+      box-shadow: 0px 0px 0px 5px #a3d866;
+      border: dashed 1px #FFF;
+      margin-left: 5px;
+    }
+    
+    .btn-stitch:hover {
+      border: dotted 1px #FFF;
+      cursor: pointer;
+    }
+  }
+
+}
+.btn-flat-vertical-border {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #668ad8;
+  background: #e1ffe8;
+  transition: .6s;
+}
+
+.btn-flat-vertical-border:hover {
+  background: #c0f8a4;
+  color: #FFF;
+  cursor: pointer;
+}

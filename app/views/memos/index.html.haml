@@ -1,0 +1,35 @@
+.header
+  %ul.nav.justify-content-end
+    .title
+      %a.nav-link.title-positon{:href => "/"} 
+        Todoリスト
+    - if user_signed_in?    
+      %li.nav-item
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav-link'
+    - else    
+      %li.nav-item
+        = link_to "ログイン", new_user_session_path, class: 'nav-link'
+      %li.nav-item
+        %a.nav-link{:href => "#"} 新規登録
+.card-group.row{:id => "ajaxreload"}
+  = render 'memos/memos-show'
+  
+  
+
+  %div.form-group
+    %div.btn-flat-vertical-border{data: {'open-label' => '作成','close-label' => "閉じる"}} 作成
+    .form
+      = form_for @newmemo do |f|
+        %ul
+          %li.title
+            = f.label :タイトル
+            = f.text_field :title
+          %li.text
+            = f.label :内容 
+            = f.text_field :text 
+          %li 
+            = f.label :期限日
+            = f.date_field :deadline
+          %li  
+            = f.submit '作成',class: 'btn- btn-stitch'
+

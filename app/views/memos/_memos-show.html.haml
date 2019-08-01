@@ -1,0 +1,45 @@
+- current_user.memos.each do |memo|
+  - if user_signed_in? && current_user.id == memo.user_id
+    - if  memo.deadline.try(:strftime,"%Y年%m月%d日")  >= @today    
+      .cards.col-md-3.col-sm-6{:style => "width: 18rem;"}
+        .card-body
+          %h5.card-title
+            = best_in_place memo, :title, :as => :input
+          %p.card-text
+            = best_in_place memo, :text, :as => :input
+        %ul.list-group.list-group-flush
+          %li.list-group-item.items
+            作成日： 
+            =memo.created_at.strftime("%Y年%m月%d日")
+          %li.list-group-item.items 
+            更新日：
+            =memo.updated_at.strftime("%Y年%m月%d日")
+          %li.list-group-item.items 
+            期限日：
+            =memo.deadline.try(:strftime,"%Y年%m月%d日")
+        .card-body.card-links
+          %a.card-link{:href => "/"}
+            = link_to '削除', "/memos/#{memo.id}/", method: :delete 
+    - else
+      .cards.over-date.col-md-3.col-sm-6{:style => "width: 18rem;"}
+        .card-body
+          %h5.card-title
+            = best_in_place memo, :title, :as => :input
+          %p.card-text
+            = best_in_place memo, :text, :as => :input
+        %ul.list-group.list-group-flush
+          %li.list-group-item.items
+            作成日： 
+            =memo.created_at.strftime("%Y年%m月%d日")
+          %li.list-group-item.items 
+            更新日：
+            =memo.updated_at.strftime("%Y年%m月%d日")
+          %li.list-group-item.items 
+            期限日：
+            =memo.deadline.try(:strftime,"%Y年%m月%d日")
+          
+        .card-body.card-links
+          %a.card-link{:href => "/"}
+            = link_to '削除', "/memos/#{memo.id}/", method: :delete 
+                    
+         
