@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: sptodo_production
-  username: sptodo
-  password: <%= ENV['SPTODO_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
