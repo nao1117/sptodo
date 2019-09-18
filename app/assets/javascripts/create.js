@@ -18,7 +18,7 @@ jQuery(function($) {
   slideToggle();
 
   button.on("click", function() {
-　　button.toggleClass("open")
+    button.toggleClass("open")
     slideToggle();
   });
   
