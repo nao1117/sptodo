@@ -1,8 +1,20 @@
 .device-form{
-  font-size:30px;
-  text-align: center;
-  padding-top:50px;
+  width: 300px;
+  margin: 50px auto;
+  font-size: 15px;
+  padding: 30px;
+  background-color: whitesmoke;
   h2{
    font-family: 'Courier New', Courier, monospace;
+   font-size: 30px;
   }
 }
+
+.actions{
+  padding:10px 0;
+}
+#error_explanation{
+    height: 80px;
+    overflow: scroll;
+    margin-bottom: 10px;
+  }
