@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  # has_many :memos
+  has_many :memos
 end

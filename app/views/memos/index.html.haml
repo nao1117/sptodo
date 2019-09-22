@@ -30,6 +30,9 @@
           %li 
             = f.label :期限日
             = f.date_field :deadline
+          %li 
+            = f.label :カテゴリー
+            = f.collection_select :category_id, Category.all, :id, :name 
           %li  
-            = f.submit '作成',class: 'btn- btn-stitch'
+            = f.submit '作成',class: 'btn- btn-stitch'   
 
