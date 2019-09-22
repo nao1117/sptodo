@@ -2,7 +2,6 @@ class MemosController < ApplicationController
   def index
     @newmemo =Memo.new
     @memos = Memo.includes(:user).order("created_at DESC")
-
     @today = Date.current.strftime("%Y年%m月%d日")
   end
 
@@ -50,6 +49,6 @@ class MemosController < ApplicationController
     end
 
     def memo_params
-      params.require(:memo).permit(:text,:title,:deadline).merge(user_id: current_user.id)
+      params.require(:memo).permit(:text,:title,:deadline,:category_id).merge(user_id: current_user.id)
     end
 end
